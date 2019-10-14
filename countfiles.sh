@@ -1,2 +1,2 @@
-#ls | wc -l
-find . ! -name . -prune -print | grep -c /
+#!/bin/bash
+ls | wc -l
