@@ -1,3 +1,3 @@
 #!/bin/bash
-echo https://github.com/altyn-bulmers
+echo altyn-bulmers
 
