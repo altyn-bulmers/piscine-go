@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "Hello altyn-bulmers"
-
+echo "Hello altyn-bulmers!"
