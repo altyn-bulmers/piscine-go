@@ -1,4 +1,4 @@
-package piscine
+package main
 
 import (
 	"github.com/01-edu/z01"
@@ -11,7 +11,7 @@ func check(r int) {
 		z01.PrintRune(c)
 		return
 	}
-	for i := 0; i <= r%10; i++ {
+	for i := 1; i <= r%10; i++ {
 		c++
 	}
 	for i := -1; i >= r%10; i-- {
