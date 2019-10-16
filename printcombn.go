@@ -1,66 +1,82 @@
 package piscine
 
-import (
-	"fmt"
-)
+//https://github.com/Yerkin/piscine-go/blob/master/printcombn.go
+import "github.com/01-edu/z01"
 
-func show(n int, table [9]int, tmax [9]int) {
-	i := 0
-	for i < n {
-		fmt.Print(table[i])
-		i++
+func che(v int) {
+	c := '0'
+	if v == 0 {
+		z01.PrintRune(c)
+		return
 	}
-	if table[0] != tmax[0] {
-		fmt.Print(", ")
+	for i := 1; i <= v%10; i++ {
+		c++
 	}
+	for i := -1; i >= v%10; i-- {
+		c++
+	}
+	if v/10 != 0 {
+		che(v / 10)
+	}
+	z01.PrintRune(c)
+	return
 }
 
-func printComb1() {
-	table := [9]int{0}
-	tmax := [9]int{9}
-	for table[0] <= tmax[0] {
-		show(1, table, tmax)
-		table[0]++
+func my_check(p int) bool {
+	for {
+		if p == 0 {
+			break
+		}
+		if p/10 != 0 && p%10 <= ((p/10)%10) {
+			return false
+		}
+		p /= 10
 	}
+	return true
 }
+func check_ok(p int) bool {
+	if p < 9 {
+		return true
+	}
+	if p%10 == 9 {
+		for {
+			if p == 0 {
+				break
+			}
+			if p/10 != 0 && p%10 != ((p/10)%10)+1 {
+				return true
+			}
+			p /= 10
+		}
 
-func PrintCombN(n int) {
-	table := [9]int{0, 1, 2, 3, 4, 5, 6, 7, 8}
-	tmax := [9]int{}
-
-	if n == 1 {
-		printComb1()
+		return false
 	} else {
-		i := n - 1
-		j := 9
-		for i >= 0 {
-			tmax[i] = j
-			i--
-			j--
-		}
-		i = n - 1
-		for table[0] < tmax[0] {
-			if table[i] != tmax[i] {
-				show(n, table, tmax)
-				table[i]++
-			}
-			if table[i] == tmax[i] {
-				if table[i-1] != tmax[i-1] {
-					show(n, table, tmax)
-					table[i-1]++
-					j = i
-					for j < n {
-						table[j] = table[j-1] + 1
-						j++
-					}
-					i = n - 1
-				}
-			}
-			for table[i] == tmax[i] && table[i-1] == tmax[i-1] && i > 1 {
-				i--
-			}
-		}
-		show(n, table, tmax)
+		return true
 	}
-	fmt.Println()
+}
+func PrintCombN(n int) {
+	mx_ln := 1
+	for i := 2; i <= n; i++ {
+		mx_ln *= 10
+	}
+	for i := mx_ln / 10; i < mx_ln; i++ {
+		if my_check(i) == true {
+			if mx_ln >= 10 {
+				z01.PrintRune('0')
+			}
+			che(i)
+			z01.PrintRune(',')
+			z01.PrintRune(' ')
+		}
+	}
+	for i := mx_ln; i <= mx_ln*9; i++ {
+		if my_check(i) == true {
+			che(i)
+			if check_ok(i) == true {
+				z01.PrintRune(',')
+				z01.PrintRune(' ')
+			}
+		}
+	}
+	z01.PrintRune('\n')
 }
