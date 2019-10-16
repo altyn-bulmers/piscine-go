@@ -10,6 +10,7 @@ func PrintComb() {
 				if next {
 					z01.PrintRune(',')
 					z01.PrintRune(' ')
+					
 				}				
 				next = true
 				z01.PrintRune(i)
@@ -19,5 +20,6 @@ func PrintComb() {
 		}			
     }
 	z01.PrintRune('\n')
+	
 	return	    
 }
