@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintComb() {
+func PrintComb2() {
 
 	for i := '0'; i <= '9'; i++ {
 		for j := '0'; j <= '9'; j++ {
