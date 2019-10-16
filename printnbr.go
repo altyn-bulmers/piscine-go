@@ -4,22 +4,30 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func PrintNbr(n int) {
+func check(r int) {
 
-	t := 1
+	c := '0'
+	if r == 0 {
+		z01.PrintRune(c)
+		return
+	}
+	for i := 0; i <= r%10; i++ {
+		c++
+	}
+	for i := -1; i >= r%10; i-- {
+		c++
+	}
+	if r/10 != 0 {
+		check(r / 10)
+	}
+	z01.PrintRune(c)
+	return
+
+}
+
+func PrintNbr(n int) {
 	if n < 0 {
-		t = -1
 		z01.PrintRune('-')
 	}
-	if n != 0 {
-		f := (n / 10) * t
-		if f != 0 {
-			PrintNbr(f)
-		}
-		k := (n % 10 * t) + '0'
-		z01.PrintRune(rune(k))
-	} else {
-		z01.PrintRune('0')
-	}
-
+	check(n)
 }
