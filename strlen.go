@@ -6,6 +6,11 @@ import (
 
 func PrintStr(str string) {
 	Astr := []rune(str)
-	fmt.Println(len(Astr))
+	count := 0
+	for i := range Astr {
+		i++
+		count++
+	}
+	fmt.Println(count)
 
 }
