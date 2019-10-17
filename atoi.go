@@ -9,6 +9,9 @@ func BasicAtoi3(m string) int {
 		i++
 		LenRune++
 	}
+	if LenRune == 0 {
+		return 0
+	}
 	count := 0
 	fin := 0
 	c := 0
@@ -39,6 +42,9 @@ func PlusMinus(m string) int {
 	for i := range Bstr {
 		i++
 		LenRune++
+	}
+	if LenRune == 0 {
+		return 0
 	}
 	Kstr := Bstr[1:LenRune]
 	count := 0
