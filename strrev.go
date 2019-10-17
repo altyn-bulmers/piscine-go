@@ -13,9 +13,9 @@ func StrLen(str string) int {
 func StrRev(s string) string {
 	LenRune := StrLen(s)
 	Bstr := []rune(s)
-	RevRune := []rune(s)
+	var reverse string
 	for i := LenRune - 1; i >= 0; i-- {
-		RevRune = Bstr[i]
+		reverse += string(Bstr[i])
 	}
-	return string(RevRune)
+	return reverse
 }
