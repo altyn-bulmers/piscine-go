@@ -9,5 +9,4 @@ func PrintStr(str string) {
 	for _, v := range Astr {
 		z01.PrintRune(v)
 	}
-	z01.PrintRune('\n')
 }
