@@ -1,8 +1,8 @@
 package piscine
 
-func BasicAtoi3(s string) int {
-	Bstr := []rune(s)
-	Cstr := []rune(s)
+func BasicAtoi3(m string) int {
+	Bstr := []rune(m)
+	Cstr := []rune(m)
 
 	LenRune := 0
 	for i := range Bstr {
@@ -31,9 +31,9 @@ func BasicAtoi3(s string) int {
 	}
 	return fin
 }
-func PlusMinus(s string) int {
-	Bstr := []rune(s)
-	Cstr := []rune(s)
+func PlusMinus(m string) int {
+	Bstr := []rune(m)
+	Cstr := []rune(m)
 
 	LenRune := 0
 	for i := range Bstr {
@@ -66,14 +66,14 @@ func PlusMinus(s string) int {
 func Atoi(s string) int {
 	result := 0
 
-	Mstr := []rune(m)
+	Mstr := []rune(s)
 
 	if Mstr[0] == 43 { // "+"
-		result = PlusMinus(m)
+		result = PlusMinus(s)
 	} else if Mstr[0] == 45 { // "-"
-		result = 0 - PlusMinus(m)
+		result = 0 - PlusMinus(s)
 	} else {
-		result = BasicAtoi3(m)
+		result = BasicAtoi3(s)
 	}
 	return result
 }
