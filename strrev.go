@@ -15,7 +15,7 @@ func StrRev(s string) string {
 	Bstr := []rune(s)
 	RevRune := []rune(s)
 	for i := LenRune - 1; i >= 0; i-- {
-		RevRune := Bstr[i]
+		RevRune = Bstr[i]
 	}
 	return string(RevRune)
 }
