@@ -1,7 +1,7 @@
 package piscine
 
-func StrLen(str string) int {
-	Astr := []rune(str)
+func StrLen(s string) int {
+	Astr := []rune(s)
 	count := 0
 	for i := range Astr {
 		i++
@@ -10,7 +10,7 @@ func StrLen(str string) int {
 	return count
 
 }
-func StrRev(s string) string {
+func StrRev(str string) string {
 	Bstr := []rune(str)
 	c := StrLen(str)
 	d := []rune()
