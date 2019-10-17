@@ -23,11 +23,9 @@ func BasicAtoi(s string) int {
 	}
 	count := 0
 	fin := 0
-	p := 0
 	c := 0
 	for i := 0; i < LenRune; i++ {
 		Cstr[i] = Bstr[LenRune-1-i]
-		p = i
 		c = 0
 		for v := Cstr[i]; v > '0'; v-- {
 			c++
