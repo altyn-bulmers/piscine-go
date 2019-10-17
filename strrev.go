@@ -13,7 +13,7 @@ func StrLen(s string) int {
 func StrRev(str string) string {
 	Bstr := []rune(str)
 	c := StrLen(str)
-	d := []rune()
+	d := []rune('')
 	for i := c - 1; i >= 0; i-- {
 		d := Bstr[i]
 	}
