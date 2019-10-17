@@ -11,6 +11,6 @@ func PrintStr(str string) {
 		i++
 		count++
 	}
-	fmt.Println(count)
+	fmt.Printf("%v", count)
 
 }
