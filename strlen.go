@@ -1,9 +1,5 @@
 package piscine
 
-import (
-	"fmt"
-)
-
 func StrLen(str string) {
 	Astr := []rune(str)
 	count := 0
@@ -11,6 +7,6 @@ func StrLen(str string) {
 		i++
 		count++
 	}
-	fmt.Printf("%v", count)
+	return count
 
 }
