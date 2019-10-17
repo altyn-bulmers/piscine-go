@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func PrintStr(str string) {
+func StrLen(str string) {
 	Astr := []rune(str)
 	count := 0
 	for i := range Astr {
