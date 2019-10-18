@@ -26,7 +26,11 @@ func Raid1a(x, y int) {
 
 
 	for i:= range k - 2 {
-		
+		z01.PrintRune('-') // 3 dash iz 5
+	}
+
+	for j:= range k -2 {
+		z01.PrintRune(' ') // 3 pustoty iz 5
 	}
 
 }
