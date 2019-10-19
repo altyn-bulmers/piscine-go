@@ -1,3 +1,4 @@
 #!/bin/bash
 ls -Amtp | tr -d ' '
 
+#ls 
