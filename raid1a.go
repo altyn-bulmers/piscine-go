@@ -6,12 +6,13 @@ import (
 
 func main(){
 
-	Raid1a(1,1)
+	Raid1a(5, 1)
 
 }
 
 func Raid1a(x, y int){
 	
+
 	z01.PrintRune('o')
 	
 
