@@ -1,11 +1,5 @@
 package main
 
-import "fmt"
-
-func main(){
-	fmt.Println(IterativeFactorial(5))
-}
-
 func IterativeFactorial(nb int) int {
 	
 	result := 1
