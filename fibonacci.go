@@ -1,10 +1,8 @@
-package main
-
-import "fmt"
+package piscine
 
 func Fibonacci(index int) int {
 	
-	if index >= 3{
+	if index >= 3 {
 		return Fibonacci(index-1) + Fibonacci(index-2)
 
 	} else if index == 0 {
@@ -14,9 +12,3 @@ func Fibonacci(index int) int {
 	}
 	return 1
 }
-
-
-func main(){
-	fmt.Println(Fibonacci (5))	
-//	1 1 2 3 5 8 13 21 34 55 89 144 233 
-}  
