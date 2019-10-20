@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main(){
-	fmt.Println(RecursivePower(3,0))
-}
+package piscine
 
 func RecursivePower(nb int, power int) int {
 	if power < 1 {
