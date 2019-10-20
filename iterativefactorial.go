@@ -9,7 +9,7 @@ func IterativeFactorial(nb int) int {
 		result := 1
 		for i := 1; i < nb+1; i++ {
 			result *= i
-			if result > 9223372036854775806 {
+			if result > 2147483647 {
 				break
 				return 0
 			}
