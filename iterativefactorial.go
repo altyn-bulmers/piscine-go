@@ -1,4 +1,4 @@
-package piscine
+package main
 
 func IterativeFactorial(nb int) int {
 	result := 1
