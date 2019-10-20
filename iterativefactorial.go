@@ -8,6 +8,6 @@ func IterativeFactorial(nb int) int {
 	if nb < 0 || nb > 12 {
 		return 0
 	} else {
-		return reuslt
+		return result
 	}
 }
