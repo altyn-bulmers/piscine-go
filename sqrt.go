@@ -1,16 +1,11 @@
-package main
+package piscine
 
-import "fmt"
-
-
-
-func main(){
-	nb := 15
-	if nb <0 || nb*10%10 != 0{
-		fmt.Println("zero")
+func Sqrt(nb int) int {
+	if nb < 0 || nb*10%10 != 0 {
+		return 0
 	} else {
-		for i:=0; i<101; i++{
-			if nb == i*i{
+		for i := 0; i < 101; i++ {
+			if nb == i*i {
 				nb = i
 				break
 			} else if i*i > nb {
@@ -18,15 +13,9 @@ func main(){
 				break
 			}
 		}
-		fmt.Println(nb)
+		return nb
 	}
-
-	
 }
-
-
-
-
 
 /*
 func Sqrt(nb int) int{
@@ -39,7 +28,7 @@ func Sqrt(nb int) int{
 	} else {
 		for i:=0; i<20; i++ {
 			result -= (result*result - nb) / (2*result)
-			
+
 		}
 		return result
 	}
@@ -48,4 +37,3 @@ func Sqrt(nb int) int{
 
 }
 */
-
