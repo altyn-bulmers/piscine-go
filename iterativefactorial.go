@@ -14,7 +14,7 @@ func IterativeFactorial(nb int) int {
 	}
 }
 
-func main(){
+func main() {
 	arg := 4
-	fmt.Println(piscine.IterativeFactorial(arg))
+	fmt.Println(IterativeFactorial(arg))
 }
