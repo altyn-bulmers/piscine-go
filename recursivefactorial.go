@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main(){
-	fmt.Println(RecursiveFactorial(2))
-}
+package piscine
 
 func RecursiveFactorial(nb int) int {
 	if nb > 1 {
@@ -13,5 +7,3 @@ func RecursiveFactorial(nb int) int {
 		return 1
 	}
 }
-
-
