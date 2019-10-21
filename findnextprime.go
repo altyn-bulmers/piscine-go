@@ -12,13 +12,13 @@ func FindNextPrime(nb int) int {
 	}
 }
 
-func IsPrime(nb int) bool {
+func IsPrime(n int) bool {
 	result := true
-	if nb <= 1{
+	if n <= 1{
 		result = false
 	} else {
-		for i := 2; i < nb; i++ {
-			if nb%i == 0 {
+		for i := 2; i < n; i++ {
+			if n%i == 0 {
 				result = false
 			} 
 			
