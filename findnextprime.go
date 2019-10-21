@@ -5,8 +5,8 @@ func FindNextPrime(nb int) int {
 		return nb
 	} else {
 		n := nb + 1
-		for IsPrime(n) == false {
-			n++
+		for IsPrime(n) == true {
+			break
 		}
 		return n
 	}
