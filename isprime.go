@@ -5,7 +5,7 @@ func IsPrime(nb int) bool {
 	if nb <= 1 {
 		result = false
 	} else {
-		for i := 2; i <= sqrt(nb); i++ {
+		for i := 2; i <= Sqrt(nb); i++ {
 			if nb%i == 0 {
 				result = false
 			}
