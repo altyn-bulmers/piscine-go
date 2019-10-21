@@ -1,20 +1,19 @@
 package piscine
 
 func Sqrt(nb int) int {
-	if nb < 0 {
+	if nb <= 0 {
 		return 0
 	} else {
 		for i := 0; i < nb/2; i++ {
 			if nb == i*i {
 				nb = i
 				break
-			} else if i*i > nb {
-				nb = 0
+			} else {
 				break
 			}
 		}
-		return nb
 	}
+	return nb
 }
 
 /*
