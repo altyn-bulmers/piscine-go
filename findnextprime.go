@@ -24,16 +24,3 @@ func FindNextPrime(nb int) int {
 // passed as parameter is a prime number.
 // Otherwise it returns false.
 // The function is optimized to avoid time-outs.
-func IsPrime(nb int) bool {
-	status := true
-	if nb > 0 {
-		for i := 2; i < nb; i++ {
-			if nb%i == 0 {
-				status = false
-			}
-		}
-	} else {
-		status = false
-	}
-	return status
-}
