@@ -1,17 +1,39 @@
 package piscine
 
+// FindNextPrime function returns the first
+// prime number that is equal or superior
+// to the int passed as parameter.
+// The function is optimized to avoid time-outs.
 func FindNextPrime(nb int) int {
+	var nextprime int
+
 	if IsPrime(nb) == true {
-		return nb
+		nextprime = nb
 	} else {
-		n := 0
-		for i := nb + 1; i < 2147483647; i++ {
-			n = i
+		for i := nb + 1; i < nb*2; i++ {
 			if IsPrime(i) == true {
-				return n
-				break
+				nextprime = i
+				return nextprime
 			}
 		}
-		return n
 	}
+	return nextprime
+}
+
+// IsPrime function returns true if the int
+// passed as parameter is a prime number.
+// Otherwise it returns false.
+// The function is optimized to avoid time-outs.
+func IsPrime(nb int) bool {
+	status := true
+	if nb > 0 {
+		for i := 2; i < nb; i++ {
+			if nb%i == 0 {
+				status = false
+			}
+		}
+	} else {
+		status = false
+	}
+	return status
 }
