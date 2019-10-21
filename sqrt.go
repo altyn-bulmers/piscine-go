@@ -4,7 +4,7 @@ func Sqrt(nb int) int {
 	if nb < 0 {
 		return 0
 	} else {
-		for i := 0; i < 2147483647; i++ {
+		for i := 1; i < nb/2; i++ {
 			if nb == i*i {
 				nb = i
 				break
