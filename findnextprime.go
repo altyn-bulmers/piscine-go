@@ -8,7 +8,7 @@ func FindNextPrime(nb int) int {
 		nb += 1
 	}
 	for i := nb; ; i += 2 {
-		if isPrime(i) {
+		if IsPrime(i) {
 			return i
 		}
 	}
