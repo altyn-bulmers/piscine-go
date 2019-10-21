@@ -5,14 +5,12 @@ func Sqrt(nb int) int {
 		return 0
 	} else {
 		for i := 0; i < nb/2; i++ {
-			if nb == i*i {
-				nb = i
-			} else {
-				break
+			if i*i == nb {
+				return i
 			}
 		}
 	}
-	return nb
+	return 0
 }
 
 /*
