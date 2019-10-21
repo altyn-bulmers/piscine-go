@@ -14,15 +14,15 @@ func FindNextPrime(nb int) int {
 
 func IsPrime(n int) bool {
 	result := true
-	if n <= 1{
+	if n <= 1 {
 		result = false
 	} else {
 		for i := 2; i < n; i++ {
 			if n%i == 0 {
 				result = false
-			} 
-			
-		} 
-	}	
-	return result 
+			}
+
+		}
+	}
+	return result
 }
