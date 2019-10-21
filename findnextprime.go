@@ -1,7 +1,7 @@
 package piscine
 
 func FindNextPrime(nb int) int {
-	if IsPrime(nb) == true{
+	if IsPrime(nb) == true {
 		return nb
 	} else {
 		n := nb + 1
