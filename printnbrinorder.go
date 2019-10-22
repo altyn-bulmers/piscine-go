@@ -9,7 +9,6 @@ func PrintNbrInOrder(n int) {
 
 	if n == 0 {
 		s = append(s, 0)
-
 	}
 	for i := 1; n > 0; i++ {
 		s = append(s, n%10)
