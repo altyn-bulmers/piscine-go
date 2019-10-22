@@ -1,6 +1,7 @@
 package piscine
 
 func TrimAtoi(s string) int {
+	var runes []rune
 	length := 0
 
 	for i, letter := range s {
@@ -15,7 +16,7 @@ func TrimAtoi(s string) int {
 
 		}
 	}
-	atoi(runes)
+	return atoi(runes)
 }
 
 func atoi(runes []rune) int {
