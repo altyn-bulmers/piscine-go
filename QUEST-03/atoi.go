@@ -6,14 +6,14 @@ func Atoi(s string) int {
 	LenRune := 0
 	result := 0
 	for i := range runes {
-		LenRune = i
+		LenRune = i + 1
 	}
 	if LenRune == 0 {
 		return 0
 	}
 
 	tens := 1
-	for k := 0; k < LenRune; k++ {
+	for k := 0; k < LenRune - 1; k++ {
 		if runes[k] == '+' || runes[k] == '-' {
 			continue
 		}
