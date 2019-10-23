@@ -5,8 +5,8 @@ import (
 	"os"
 )
 
-func main(){
-	
+func main() {
+
 	arguments := os.Args
 	name := arguments[0]
 
