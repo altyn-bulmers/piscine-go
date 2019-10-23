@@ -13,7 +13,7 @@ func main() {
 		if i != 0 {
 			for j := range arguments[i] {
 				runes := []rune(arguments[i])
-				 {
+				{
 					z01.PrintRune(runes[j])
 				}
 			}
