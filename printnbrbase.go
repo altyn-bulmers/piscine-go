@@ -3,7 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbrBase(nbr int, base string) {
-	len := StrLen(base)
+	len := StrLength(base)
 	runes := []rune(base)
 	valid := true
 	if len < 2 {
@@ -44,4 +44,14 @@ func BaseRecursion(n int, runes []rune, len int) {
 		mod = -mod
 	}
 	z01.PrintRune(runes[mod])
+}
+
+func StrLength(str string) int {
+	runes := []rune(str)
+	var count int = 0
+	for i := range runes {
+		count++
+		i++
+	}
+	return count
 }
