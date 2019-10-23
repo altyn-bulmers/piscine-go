@@ -11,7 +11,7 @@ func IsPrintable(str string) bool {
 	runes := []rune(str)
 
 	for i := range runes {
-		if checkprint(runes[i]) == false {
+		if checkprint(runes[i]) == true {
 			return false
 		}
 	}
