@@ -1,6 +1,16 @@
-package piscine
+package main
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+//	"fmt"
+)	
+
+func main(){
+	s := 128
+	b := "choumi"
+	PrintNbrBase(s, b)
+}
+
 
 func PrintNbrBase(nbr int, base string) {
 	len := StrLength(base)
