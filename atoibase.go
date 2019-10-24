@@ -1,48 +1,36 @@
 package piscine
 
 func AtoiBase(s string, base string) int {
-	baseF := Length(base)
-	result := []rune(base)
-	pos := 0
-
-	if constrains1(baseF, result) == true {
-		for i := 0; i < Length(s); i++ {
-			pos *= Length(base)
-			pos += Index1(s, base)
+	n := Length(base)
+	count := Length(s)
+	if n < 1 {
+		return 0
+	}
+	for i := 0; i < n; i++ {
+		if base[i] == '+' || base[i] == '-' {
+			return 0
 		}
-		return pos
-	}
-	return 0
-}
-
-func constrains1(baseF int, result []rune) bool {
-
-	if baseF == 0 {
-		return false
-	}
-	for a := 0; a < Length(string(result)); a++ {
-		for x := a + 1; x < Length(string(result)); x++ {
-			if baseF < 2 || result[a] == result[x] || result[x] == '+' || result[x] == '-' {
-				return false
+		for j := i + 1; j < n; j++ {
+			if base[i] == base[j] {
+				return 0
 			}
 		}
 	}
-	return true
-}
-
-func Index1(s string, toFind string) int {
-	arrayStr := []rune(s)
-	array := []rune(toFind)
-	for j := 0; j < Length(s); j++ {
-		for x := 0; x < Length(toFind); x++ {
-
-			if arrayStr[j] == array[x] { //[0:3]
-				return x
+	res := 0
+	bn := 1
+	numeric := 0
+	for i := count - 1; i >= 0; i-- {
+		for j := 0; j < n; j++ {
+			if base[j] == s[i] {
+				numeric = j
 			}
 		}
+		res = res + bn*numeric
+		bn = bn * n
+
 	}
 
-	return -1
+	return res
 }
 
 func Length(a interface{}) int {
