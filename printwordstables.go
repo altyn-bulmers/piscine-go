@@ -10,16 +10,16 @@ func PrintWordsTables(table []string) {
 	}
 
 	for _, v := range table {
-		Printrune(v)
+		PRune(v)
 	}
 }
 
-func Printrune(str string) {
+func PRune(str string) {
 	strRune := []rune(str)
 
 	for _, v := range strRune {
-		z01.Printrune(v)
+		z01.PrintRune(v)
 	}
-	z01.Printrune('\n')
+	z01.PrintRune('\n')
 
 }
