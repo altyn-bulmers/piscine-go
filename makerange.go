@@ -2,7 +2,7 @@ package piscine
 
 func MakeRange(min, max int) []int {
 	if min >= max {
-		return []int{}
+		return []int{nil}
 	}
 
 	array := make([]int, max-min)
